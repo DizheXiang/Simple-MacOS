@@ -1,9 +1,45 @@
+:root {
+    --color-white: #fff;
+    --color-white-100: rgba(255, 255, 255, 0.1);
+    --color-white-200: rgba(255, 255, 255, 0.2);
+    --color-white-400: rgba(255, 255, 255, 0.4);
+    --color-white-800: rgba(255, 255, 255, 0.8);
+    --color-white-900: rgba(255, 255, 255, 0.9);
+    --color-black: #1e1e1e;
+    --color-black-100: rgba(0, 0, 0, 0.1);
+    --color-black-50: rgba(211, 197, 197, 0.39);
+    --color-black-200: rgba(0, 0, 0, 0.2);
+    --color-black-500: rgba(0, 0, 0, 0.5);
+    --color-black-600: rgba(0, 0, 0, 0.6);
+    --color-blue-800: #007ff7;
+    --app-color-white: rgb(252, 255, 251);
+}
+
 * {
     margin: 0;
     padding: 0;
     outline: 0;
     border: 0;
     list-style: none;
+}
+
+button,
+input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    height: 100vh;
+    user-select: none;
+    font-family: "Lexend", sans-serif;
+    background: url(../images/macOS-Monterey-wallpaper-Light.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
   }
 
 .navbar ul {

@@ -9,6 +9,11 @@
         <meta name="description" content="JavaScript-based MacOS shown in the browser" />
         <title>Simple MacOS</title>
 
+        <!-- Jquery -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- Local  -->
         <link rel="stylesheet" href="./CSS/style.css" />
     </head>
 
@@ -16,16 +21,33 @@
         <div class="navbar">
             <ul>
                 <li class="upper-left logo">
-                <img src="./src/blackapple.ico" alt="Apple"/>
+                <img src="./icons/blackapple.ico" alt="Apple"/>
                 <ul>
                     <li>
                         <button>About This Mac</button>
                     </li>
+                    <hr>
                     <li>
                         <button>System Preferences...</button>
+                        <button>App Store...</button>
                     </li>
                     <li>
-                        <button>App Store...</button>
+                        <button>Force Quit...</button>
+                    </li>
+                    <li>
+                        <button>Sleep</button>
+                        <button>Restart...</button>
+                        <button>Shut Down...</button>
+                    </li>
+                    <li>
+                        <button>Lock Screen</button>
+                        <button>Log Out 
+                            <input
+                            autoFocus
+                            value="Dizhe Xiang"
+                            />
+                        </button>
+                        
                     </li>
                 </ul>
                 </li>
