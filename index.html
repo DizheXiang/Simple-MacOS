@@ -20,38 +20,98 @@
     <body>
         <div class="navbar">
             <ul>
-                <li class="upper-left logo">
-                <img src="./icons/blackapple.ico" alt="Apple"/>
-                <ul>
-                    <li>
-                        <button>About This Mac</button>
-                    </li>
-                    <hr>
-                    <li>
-                        <button>System Preferences...</button>
-                        <button>App Store...</button>
-                    </li>
-                    <li>
-                        <button>Force Quit...</button>
-                    </li>
-                    <li>
-                        <button>Sleep</button>
-                        <button>Restart...</button>
-                        <button>Shut Down...</button>
-                    </li>
-                    <li>
-                        <button>Lock Screen</button>
-                        <button>Log Out 
-                            <input
-                            autoFocus
-                            value="Dizhe Xiang"
-                            />
-                        </button>
-                        
-                    </li>
-                </ul>
+                <li class="leftHeader logo">
+                    <img src="./icons/blackapple.ico" alt="Apple" width="16vw"  height="16vh"/>
+                        <ul>
+                            <li>
+                                <button>About This Mac</button>
+                            </li>
+                            <hr>
+                            <li>
+                                <button>System Preferences...</button>
+                                <button>App Store...</button>
+                            </li>
+                            <li>
+                                <button>Force Quit...</button>
+                            </li>
+                            <li>
+                                <button>Sleep</button>
+                                <button>Restart...</button>
+                                <button>Shut Down...</button>
+                            </li>
+                            <li>
+                                <button>Lock Screen</button>
+                                <button>
+                                    <form class="inline-username">
+                                        <label for="username">Log Out</label>
+                                        <input
+                                        type="text"
+                                        id="username"
+                                        name="username"
+                                        placeholder="Username" 
+                                        value="Dizhe Xiang"
+                                        />
+                                    </form>
+                                </button> 
+                            </li>
+                        </ul>
                 </li>
-            </ul>   
+
+                <!-- <li class="leftHeader app_name" id="Terminal">
+                    <p>Terminal</p>
+                  </li>
+                  <li class="leftHeader app_name" id="Notes">
+                    <p>Notes</p>
+                  </li>
+                  <li class="leftHeader app_name" id="calculator">
+                    <p>Calculator</p>
+                  </li>
+                  <li class="leftHeader app_name" id="VScode">
+                    <p>VScode</p>
+                </li> -->
+
+                <li class="leftHeader">
+                    File
+                    <ul>
+                      <li>
+                        <button>New File</button>
+                        <button>New Window</button>
+                      </li>
+                      <li>
+                        <button>Open File</button>
+                        <button>Open Recent File</button>
+                      </li>
+                      <li>
+                        <button>Save</button>
+                        <button>Save as</button>
+                      </li>
+                      <li>
+                        <button>Searching</button>
+                        <button>Propertie File</button>
+                      </li>
+                      <li>
+                        <button>Customize</button>
+                      </li>
+                      <li>
+                        <button>Exit</button>
+                      </li>
+                    </ul>
+                </li>
+                <li class="leftHeader hidden">Edit</li>
+                <li class="leftHeader hidden">View</li>
+                <li class="leftHeader hidden">Go</li>
+                <li class="leftHeader hidden">Tools</li>
+                <li class="leftHeader hidden">Help</li>
+            </ul>
+
+            <ul class="navbar-right">
+                <li>
+                    <img url="./icons/battery.jpeg"/>
+                </li>
+                <div class="menu-container">
+
+                </div>
+            </ul>
         </div>
     </body>
 </html>

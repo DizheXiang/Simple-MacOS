@@ -11,8 +11,7 @@
     --color-black-200: rgba(0, 0, 0, 0.2);
     --color-black-500: rgba(0, 0, 0, 0.5);
     --color-black-600: rgba(0, 0, 0, 0.6);
-    --color-blue-800: #007ff7;
-    --app-color-white: rgb(252, 255, 251);
+    --color-blue-800: #4ea1ef;
 }
 
 * {
@@ -35,24 +34,158 @@ body {
     height: 100vh;
     user-select: none;
     font-family: "Lexend", sans-serif;
+    width: 100vw;
+    height: 100vh;
     background: url("../images/macOS-Monterey-wallpaper-Light.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
-  }
+}
 
-.navbar ul {
+.navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    animation: top-to-bottom 0.3s;
+    width: 100%;
+    height: 28px;
+    padding: 0 20px;
+    background-color: rgba(200, 200, 221, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.31) 0 0 1px, rgba(0, 0, 0, 0.18) 0 0 5px, rgba(0, 0, 0, 0.3) 0 8px 50px;
+}
+
+.navbar > ul {
     display: flex;
     align-items: center;
 }
 
 .navbar li {
     position: relative;
-    font-size: 15px;
+    font-size: 14px;
     margin: 0 4px;
     cursor: url(./cursor/Link.cur), pointer;
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.288);
     transition: 0.2s;
     -webkit-tap-highlight-color: transparent;
+}
+
+.navbar .leftHeader {
+    padding: 4px 8px;
+}
+  
+.navbar .leftHeader:hover {
+    color: var(--color-black);
+    border-radius: 5px;
+    background-color: var(--color-black-200);
+}
+
+li > ul {
+    display: none;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    top: 100%;
+    font-weight: 600;
+    padding: 4px;
+    min-width: 200px;
+    background: var(--color-white-400);
+    backdrop-filter: blur(11px);
+    border-radius: 5px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.363);
+}
+
+li:hover > ul {
+    display: flex;
+}
+
+li > ul > li {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 5px;
+    margin-bottom: 5px !important;
+}
+
+li > ul > li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+  
+li > ul > li > button {
+    color: var(--color-black);
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    text-align: left;
+    font-family: "Lexend", sans-serif;
+    font-weight: 100;
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: 80ms;
+    font-size: 14px;
+    cursor: url(./cursor/Link.cur), pointer;
+}
+
+li > ul > li > button:hover {
+    color: var(--color-white);
+    background: var(--color-blue-800);
+}
+  
+li > ul > li > button:active {
+    background-color: #0063f7;
+}
+
+li > ul > li > button .inline-username {
+    color: var(--color-black);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    font-family: "Lexend", sans-serif;
+    font-weight: 100;
+    transition: 80ms;
+    font-size: 14px;
+    cursor: url(./cursor/Link.cur), pointer;
+}
+
+li > ul > li > button .inline-username:hover {
+    color: var(--color-white);
+    background: var(--color-blue-800);
+}
+
+li > ul > li > button .inline-username input {
+    color: var(--color-black);
+    vertical-align: middle;
+    padding: 5px;
+    font-family: "Lexend", sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    cursor: url(./cursor/Link.cur), pointer;
+}
+
+li > ul > li > button .inline-username input:hover {
+    color: var(--color-white);
+}
+
+li.app_name {
+    display: none;
+    font-weight: 900 !important;
+}
+
+.navbar-right li {
+    margin: 0 6px;
+}
+
+.navbar svg {
+    fill: var(--color-black);
+}
+
+@media screen and (max-width: 600px) {
+    .navbar__right .rightButton {
+      display: none;
+    }
 }
