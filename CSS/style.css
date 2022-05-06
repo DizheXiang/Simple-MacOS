@@ -35,7 +35,7 @@ body {
     height: 100vh;
     user-select: none;
     font-family: "Lexend", sans-serif;
-    background: url(../images/macOS-Monterey-wallpaper-Light.jpg);
+    background: url("../images/macOS-Monterey-wallpaper-Light.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
