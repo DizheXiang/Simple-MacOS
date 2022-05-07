@@ -9,15 +9,11 @@
         <meta name="description" content="JavaScript-based MacOS shown in the browser" />
         <title>Simple MacOS</title>
 
-        <!-- Jquery -->
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-        <!-- Local  -->
+        <!-- Import CSS  -->
         <link rel="stylesheet" href="./CSS/style.css" />
     </head>
 
-    <body>
+    <body onload="updateClock(); setInterval('updateClock()', 1000 )">
         <div class="navbar">
             <ul>
                 <li class="leftHeader logo">
@@ -74,26 +70,25 @@
                     File
                     <ul>
                       <li>
-                        <button>New File</button>
-                        <button>New Window</button>
+                        <button>New File Window</button>
+                        <button>New Folder</button>
                       </li>
                       <li>
-                        <button>Open File</button>
-                        <button>Open Recent File</button>
+                        <button>Open</button>
+                        <button>Open With</button>
+                        <button>Close Window</button>
                       </li>
                       <li>
                         <button>Save</button>
                         <button>Save as</button>
                       </li>
                       <li>
-                        <button>Searching</button>
-                        <button>Propertie File</button>
+                        <button>GetInfo</button>
+                        <button>Rename</button>
                       </li>
                       <li>
-                        <button>Customize</button>
-                      </li>
-                      <li>
-                        <button>Exit</button>
+                        <button>Move to Trash</button>
+                        <button>Eject</button>
                       </li>
                     </ul>
                 </li>
@@ -106,12 +101,45 @@
 
             <ul class="navbar-right">
                 <li>
-                    <img url="./icons/battery.jpeg"/>
+                    <img src="./icons/wifi.png" alt="Wi-fi" width="22vw"  height="22vh">
                 </li>
-                <div class="menu-container">
-
-                </div>
+                <li>
+                    <img src="./icons/battery.png" alt="battery" width="24vw"  height="24vh">
+                </li>
+                <li class="control-center-hidden">
+                    <img src="./icons/switches.png" class="control-center" 
+                    alt="control center" width="22vw"  height="22vh"
+                    >
+                    <div class="grid-controller">
+                        <div class="grid-controller-upper-left">
+                            <!--Wi-Fi Button-->
+                            <button>
+                                <img src="./icons/wifi.png" alt="Wi-fi" width="30vw"  height="30vh">
+                                Wi-Fi
+                            </button>
+                            <!--AirDrop Button-->
+                            <button>
+                                <img src="./icons/airdrop.png" alt="airdrop" width="30vw"  height="30vh">
+                                AirDrop
+                            </button>
+                            <!--Bluetooth Button-->
+                            <button>
+                                <img src="./icons/bluetooth.png" alt="bluetooth" width="30vw"  height="30vh">
+                                Bluetooth
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div id="currentTime"></div>
+                </li>
+                    
+                
             </ul>
         </div>
+
+        <!-- Import JavaScript. -->
+        <script src="script.js"></script>
+
     </body>
 </html>
