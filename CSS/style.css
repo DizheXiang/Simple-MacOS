@@ -72,6 +72,10 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+.navbar svg {
+    fill: var(--color-black);
+}
+
 .navbar .leftHeader {
     padding: 4px 8px;
 }
@@ -189,18 +193,6 @@ li.app_name {
     min-width: 280px;
 }
 
-
-
 .navbar-right li {
     margin: 0 6px;
-}
-
-.navbar svg {
-    fill: var(--color-black);
-}
-
-@media screen and (max-width: 600px) {
-    .navbar__right .rightButton {
-      display: none;
-    }
 }
