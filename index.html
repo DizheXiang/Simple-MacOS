@@ -55,7 +55,7 @@
                         </ul>
                 </li>
 
-                <!-- <li class="leftHeader app_name" id="Terminal">
+                <li class="leftHeader app_name" id="Terminal">
                     <p>Terminal</p>
                   </li>
                   <li class="leftHeader app_name" id="Notes">
@@ -66,7 +66,7 @@
                   </li>
                   <li class="leftHeader app_name" id="VScode">
                     <p>VScode</p>
-                </li> -->
+                </li>
 
                 <li class="leftHeader">
                     File
@@ -155,8 +155,7 @@
         <!-- dock -->
         <div class="dock">
             <button class="icon">
-                <img src="./icons/finder.png" alt="Finder Logo" class="hidden"
-                width="50" height="50" />
+                <img src="./icons/finder.png" alt="Finder Logo" class="hidden" />
             </button>
             <button
                 accesskey="o"
@@ -167,27 +166,25 @@
             class="launching hidden"
             src="./icons/launchpad.png"
             alt="Launchpad Logo"
-            width="50" height="50"
             />
             <button class="icon">
                 <img
                   src="./icons/preferences.png"
                   alt="Preferences Logo"
                   class="hidden"
-                  width="50" height="50"
-                />
+                  />
             </button>
             <hr class="point hidden" id="point-launchpad" />
             </button>
             <button class="icon">
-                <img src="./icons/appstore.png" alt="App Store Logo" width="50" height="50"/>
+                <img src="./icons/appstore.png" alt="App Store Logo"/>
             </button>
             <button class="icon openNote">
-                <img src="./icons/notes.png" alt="Notes Logo" width="50" height="50"/>
+                <img src="./icons/notes.png" alt="Notes Logo" />
                 <hr class="point hidden" id="point-note" />
             </button>
             <button class="icon open-cal">
-                <img src="./icons/calculator.png" alt="Calculator Logo" width="50" height="50"/>
+                <img src="./icons/calculator.png" alt="Calculator Logo" />
                 <hr class="point" id="point-cal" />
             </button>
             <button accesskey="t" class="icon opening">
@@ -195,16 +192,15 @@
                   src="./icons/terminal.png"
                   alt="Terminal Logo"
                   class="hidden"
-                  width="50" height="50"
-                />
+                  />
                 <hr class="point" id="point-terminal" />
             </button>
             <button class="icon open-google">
-                <img src="./icons/chrome.png" alt="Chrome Logo" width="50" height="50"/>
+                <img src="./icons/chrome.png" alt="Chrome Logo"/>
                 <hr class="point" id="point-google" />
             </button>
-            <button class="icon open_vscode">
-                <img src="./icons/vscode.svg" alt="Vscode apps" class="hidden" width="50" height="50"/>
+            <button class="icon open-vscode">
+                <img src="./icons/vscode.svg" alt="Vscode apps" class="hidden">
                 <hr class="point hidden" id="point-vscode" />
             </button>
             <hr class="column hidden" />
@@ -213,45 +209,45 @@
                   src="./icons/bin.png"
                   alt="Trash Bin Logo"
                   class="hidden Trash"
-                  width="50" height="50"
-                />
+                  />
             </button>
         </div>
 
-        <!-- calculator -->
-        <div class="calculator">
-            <div class="calculator-top">
-              <div class="calculator-top--taskbar">
-                <button class="close-cal"></button>
-              </div>
-              <input
-                class="calculator-top--output"
-                type="text"
-                value="0"
-              />
+        <div class="container-window">
+            <!-- calculator -->
+            <div class="calculator">
+                <div class="calculator-top">
+                    <div class="calculator-top--taskbar">
+                        <button class="close-cal"></button>
+                    </div>
+                    <input
+                    class="calculator-top--output"
+                    type="text"
+                    value="0"
+                    />
+                </div>   
+                <div class="calculator-input">
+                    <button value="AC" class="operator-row">AC</button>
+                    <button value="+/-" class="operator-row">+/-</button>
+                    <button value="%" class="operator-row">%</button>
+                    <button value="/" class="button operator">÷</button>
+                    <button value="7" class="button number">7</button>
+                    <button value="8" class="button number">8</button>
+                    <button value="9" class="button number">9</button>
+                    <button value="*" class="button operator">×</button>
+                    <button value="4" class="button number">4</button>
+                    <button value="5" class="button number">5</button>
+                    <button value="6" class="button number">6</button>
+                    <button value="-" class="button operator">−</button>
+                    <button value="1" class="button number">1</button>
+                    <button value="2" class="button number">2</button>
+                    <button value="3" class="button number">3</button>
+                    <button value="+" class="button operator">+</button>
+                    <button value="0" class="button span-two">0</button>
+                    <button value="." class="button number">.</button>
+                    <button value="=" class="equal-operator">=</button>
+                    </div>
             </div>
-            <div class="input">
-              <button value="C" class="button operator-row">C</button>
-              <button value="+/-" class="button operator-row">+/-</button>
-              <button value="%" class="button operator-row">%</button>
-              <button value="/" class="button operator">÷</button>
-              <button value="7" class="button number">7</button>
-              <button value="8" class="button number">8</button>
-              <button value="9" class="button number">9</button>
-              <button value="*" class="button operator">×</button>
-              <button value="4" class="button number">4</button>
-              <button value="5" class="button number">5</button>
-              <button value="6" class="button number">6</button>
-              <button value="-" class="button operator">−</button>
-              <button value="1" class="button number">1</button>
-              <button value="2" class="button number">2</button>
-              <button value="3" class="button number">3</button>
-              <button value="+" class="button operator">+</button>
-              <button value="0" class="button number large">0</button>
-              <button value="." class="button number">.</button>
-              <button value="=" class="button operator r-radius">=</button>
-            </div>
-          </div>
         </div>
 
         <!-- Import JavaScript. -->
