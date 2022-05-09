@@ -4,12 +4,6 @@ updateTime();
 var container = document.querySelector(".container-window")
 var navbar = document.querySelector(".navbar")
 
-var app_name_calculator = document.querySelector("#calculator")
-var calculator = document.querySelector(".calculator")
-var closecal = document.querySelector(".close-cal")
-var opencalculator = document.querySelector(".open-cal")
-var point_cal = document.querySelector("#point-cal")
-
 function close_window(close, point, appName) {
     close.style.display = "none"
     point.style.display = "none"
@@ -23,14 +17,6 @@ function open_window(open, point, appName) {
     appName.style.display = "block"
     point.style.display = "block"
 }
-
-opencalculator.addEventListener("click", () =>
-  open_window(calculator, point_cal, app_name_calculator)
-)
-
-closecal.addEventListener("click", () =>
-  close_window(calculator, point_cal, app_name_calculator)
-)
 
 $(function () {
     $(".terminal").draggable()

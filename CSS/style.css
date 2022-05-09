@@ -65,7 +65,7 @@ body {
 
 li.app_name {
     display: none;
-    font-weight: 900 !important;
+    font-weight: 600;
 }
 
 .navbar li {
@@ -167,11 +167,6 @@ li > ul > li > button .inline-username input {
 
 li > ul > li > button .inline-username input:hover {
     color: var(--color-white);
-}
-
-li.app_name {
-    display: none;
-    font-weight: 900 !important;
 }
 
 .navbar-right {

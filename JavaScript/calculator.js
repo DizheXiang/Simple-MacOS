@@ -1,9 +1,20 @@
-// select all the buttons
+var app_name_calculator = document.querySelector("#calculator")
+var calculator = document.querySelector(".calculator")
+var closecal = document.querySelector(".close-cal")
+var opencalculator = document.querySelector(".open-cal")
+var point_cal = document.querySelector("#point-cal")
+
+opencalculator.addEventListener("click", () =>
+  open_window(calculator, point_cal, app_name_calculator)
+)
+
+closecal.addEventListener("click", () =>
+  close_window(calculator, point_cal, app_name_calculator)
+)
+
 const buttons = document.querySelectorAll(".calculator-input button")
-// select the <input type="text" class="display" disabled> element
 const display = document.querySelector(".calculator-top--output")
 
-// add eventListener to each button
 buttons.forEach(button => {
   button.addEventListener("click", event => calculate(event.target.value))
 })
