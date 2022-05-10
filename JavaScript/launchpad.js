@@ -2,6 +2,7 @@ var launchpad = document.querySelector(".launchpad")
 var launchpad_searchbox = document.querySelector(".launchpad .searchbox")
 var launchpad_apps_container = document.querySelector(".apps-container")
 var opencalculator_lunchpad = document.querySelector(".open-cal-launch")
+var point_launchpad = document.querySelector("#point-launchpad")
 
 launchpad_searchbox.addEventListener("input", handleLaunchpadSearch)
 opencalculator_lunchpad.addEventListener("click", openCal_lunchpad)
