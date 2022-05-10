@@ -1,5 +1,6 @@
 var app_name_calculator = document.querySelector("#calculator")
 var calculator = document.querySelector(".calculator")
+var point_cal = document.querySelector("#point-cal")
 var closecal = document.querySelector(".close-cal")
 var opencalculator = document.querySelector(".open-cal")
 var point_cal = document.querySelector("#point-cal")

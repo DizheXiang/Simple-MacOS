@@ -1,5 +1,5 @@
 //time diplay
-updateTime();
+updateTime()
 
 var container = document.querySelector(".container-window")
 var navbar = document.querySelector(".navbar")
@@ -16,6 +16,8 @@ function open_window(open, point, appName) {
     container.style.display = "flex"
     appName.style.display = "block"
     point.style.display = "block"
+    launchpad.style.display = "none"
+    point_launchpad.style.display = "none"
 }
 
 $(function () {

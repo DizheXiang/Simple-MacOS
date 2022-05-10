@@ -1,0 +1,86 @@
+.launchpad {
+    display: none;
+    animation: opacity 300ms;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+}
+
+.searchbox {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.searchbox .search-input {
+    height: 30px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px solid rgba(255, 255, 255, 0.582);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.582);
+    border-right: 1px solid rgba(255, 255, 255, 0.219);
+    border-left: 1px solid rgba(255, 255, 255, 0.219);
+    border-radius: 4px;
+    padding: 0 3px;
+}
+
+.searchbox .search-input svg {
+    fill: rgb(255, 255, 255);
+}
+
+.searchbox input {
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+  
+.searchbox input::placeholder {
+    color: #fff;
+    font-weight: 100;
+}
+  
+.searchbox input:focus {
+    text-align: left;
+}
+
+.launchpad .apps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.launchpad .launchpad-children {
+    display: flex;
+    place-items:center;
+    flex-direction: column;
+    cursor: url(/cursor/Link.cur), pointer;
+}
+
+@media screen and (min-width: 1200px) {
+    .launchpad .Apps-container {
+      grid-row-gap: 20px;
+    }
+    .launchpad .child-launchpad img {
+      width: 80px;
+    }
+    .launchpad .child-launchpad strong {
+      font-size: 18px;
+    }
+  }
+  
+.launchpad .launchpad-children img {
+    width: 80px;
+}
+
+.launchpad .launchpad-children strong {
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.873);
+}

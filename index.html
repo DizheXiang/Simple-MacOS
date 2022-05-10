@@ -12,6 +12,7 @@
         <!-- Import CSS  -->
         <link rel="stylesheet" href="./CSS/style.css" />
         <link rel="stylesheet" href="./CSS/calculator.css" />
+        <link rel="stylesheet" href="./CSS/launchpad.css" />
     </head>
 
     <body onload="updateClock(); setInterval('updateClock()', 1000 )">
@@ -159,7 +160,7 @@
             </button>
             <button
                 accesskey="o"
-                class="block-point icon onhover"
+                class="icon"
                 onclick="handleOpenLaunching()"
             >
             <img
@@ -174,7 +175,6 @@
                   class="hidden"
                   />
             </button>
-            <hr class="point hidden" id="point-launchpad" />
             </button>
             <button class="icon">
                 <img src="./icons/appstore.png" alt="App Store Logo"/>
@@ -250,9 +250,55 @@
             </div>
         </div>
 
+        <!-- launchpad -->
+        <div class="launchpad" id="launchpad">
+            <div class="searchbox">
+              <div class="search-input">
+                <svg width="24" height="24">
+                  <path
+                    d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"
+                  ></path>
+                </svg>
+                <input
+                  type="search"
+                  name="search"
+                  placeholder="Search"
+                  accesskey="s"
+                />
+              </div>
+            </div>
+            <div class="apps-container">
+                <div class="launchpad-children" data-keywords="App Store,App, Store">
+                    <img src="./icons/appstore.png" alt="App Store" />
+                    <strong>App Store</strong>
+                </div>
+                <div class="launchpad-children open-notes-launch">
+                    <img src="./icons/notes.png" alt="Notes" />
+                    <strong>Notes</strong>
+                </div>
+                <div class="launchpad-children open-cal-launch">
+                    <img src="./icons/calculator.png" alt="Calculator" />
+                    <strong>Calculator</strong>
+                </div>
+                <div class="launchpad-children open-terminal-launch">
+                    <img src="./icons/terminal.png" alt="Terminal"/>
+                    <strong>Terminal</strong>
+                </div>
+                <div class="launchpad-children open-google-launch">
+                    <img src="./icons/chrome.png" alt="Chrome"/>
+                    <strong>Google</strong>
+                </div>
+                <div class="launchpad-children open-google-launch">
+                    <img src="./icons/vscode.svg" alt="Vscode">
+                    <strong>VScode</strong>
+                </div>
+            </div>
+        </div>
+
         <!-- Import JavaScript. -->
         <script src="JavaScript/script.js"></script>
         <script src="JavaScript/calculator.js"></script>
+        <script src="JavaScript/launchpad.js"></script>
 
     </body>
 </html>
