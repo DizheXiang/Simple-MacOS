@@ -1,3 +1,4 @@
+
 //time diplay
 updateTime()
 
@@ -19,14 +20,6 @@ function open_window(open, point, appName) {
     launchpad.style.display = "none"
     point_launchpad.style.display = "none"
 }
-
-$(function () {
-    $(".terminal").draggable()
-    $(".note").draggable()
-    $(".calculator").draggable()
-    $(".Vscode").draggable()
-    $(".spotlight_serach").draggable()
-})
 
 function updateTime() {
     var str = "";
