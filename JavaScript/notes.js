@@ -1,23 +1,16 @@
 // import NotesAPI from "./NotesAPI"
 // import NotesView from "./NotesView"
 
-// const app = document.getElementById("notesApp")
-// const view = new NotesView(app, {
-//     onNoteSelect() {
-//         console.log("Note has been selected")
-//     }
-// })
-
 var openNotes = document.querySelector(".open-notes")
 var closeNotes = document.querySelector(".close-notes")
-var adding = document.querySelector("#adding")
-var deleting = document.querySelector("#deleting")
-var lists = document.querySelector(".notes-content-lists")
-var content_body = document.querySelector(".content-typing")
-
 var app_name_notes = document.querySelector("#Notes")
 var notes = document.querySelector(".notes")
 var point_note = document.querySelector("#point-note")
+
+var adding = document.querySelector("#adding")
+var deleting = document.querySelector("#deleting")
+var lists = document.querySelector(".content-lists")
+var content_body = document.querySelector(".content-typing")
 
 openNotes.addEventListener("click", () =>
   open_window(notes, point_note, app_name_notes)
@@ -36,7 +29,7 @@ function handleAdding() {
 }
   
 function handleDeleting() {
-    var inputChild = document.querySelector(".notes-content-lists input")
+    var inputChild = document.querySelector(".content-lists input")
     inputChild.remove()
     // content_body.style.display = "none"
 }
@@ -45,4 +38,15 @@ function handleNotes() {
     content_body.style.display = "block"
 }
 
-// console.log(NotesAPI.getAllNotes())
+// const app = document.getElementById("notesApp")
+// const view = new NotesView(app, {
+//     onNoteAdd() {
+//         console.log("Add a note");
+//     },
+//     onNoteEdit(newTitle, newBody) {
+//       console.log(newTitle);
+//       console.log(newBody);
+//   }
+// })
+
+// view.updateNoteList(NotesAPI.getAllNotes());

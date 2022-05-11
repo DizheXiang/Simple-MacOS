@@ -6,33 +6,8 @@
 // var app_name_notes = document.querySelector("#Notes")
 // var notes = document.querySelector(".notes")
 // var point_note = document.querySelector("#point-note")
-// var lists = document.querySelector(".notes-content-list")
+// var lists = document.querySelector(".content-list")
 // var content_body = document.querySelector(".content-typing")
-
-// openNotes.addEventListener("click", () =>
-//   open_window(notes, point_note, app_name_notes)
-// )
-// closeNotes.addEventListener("click", () =>
-//   close_window(notes, point_note, app_name_notes)
-// )
-// adding.addEventListener("click", handleAdding)
-// deleting.addEventListener("click", handleDeleting)
-
-// function handleAdding() {
-//     var create_input = document.createElement("input")
-//     create_input.placeholder = "Enter the title"
-//     lists.append(create_input)
-// }
-  
-// function handleDeleting() {
-//     var inputChild = document.querySelector(".notes-content-list input")
-//     inputChild.remove()
-//     // content_body.style.display = "none"
-// }
-  
-// function handleNotes() {
-//     content_body.style.display = "block"
-// }
 
 export default class NotesAPI {
     static getAllNotes() {
