@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="./CSS/style.css" />
         <link rel="stylesheet" href="./CSS/calculator.css" />
         <link rel="stylesheet" href="./CSS/launchpad.css" />
+        <link rel="stylesheet" href="./CSS/notes.css" />
     </head>
 
     <body onload="updateClock(); setInterval('updateClock()', 1000 )">
@@ -180,7 +181,7 @@
             <button class="icon">
                 <img src="./icons/appstore.png" alt="App Store Logo"/>
             </button>
-            <button class="icon openNote">
+            <button class="icon open-notes">
                 <img src="./icons/notes.png" alt="Notes Logo" />
                 <hr class="point hidden" id="point-note" />
             </button>
@@ -249,10 +250,48 @@
                     <button value="=" class="equal-operator">=</button>
                     </div>
             </div>
+
+            <!-- Notes -->
+            <div class="notes">
+                <div class="notes-top">
+                    <div class="notes-top--taskbar">
+                        <button class="close-notes"></button>
+                    </div>
+                    <div class="notes-top--right">
+                        <div class="notes-search">
+                            <img src="https://img.icons8.com/fluency-systems-filled/48/000000/search.png">
+                            <input
+                              type="search"
+                              name="search"
+                              placeholder="Search"
+                              accesskey="s"
+                            />
+                        </div>
+                        <button class="notes-edit" id="adding">
+                            <img src="https://img.icons8.com/material-rounded/25/000000/insert-page.png"/>
+                        </button>
+                        <button class="notes-edit" id="deleting">
+                            <img src="https://img.icons8.com/ios-glyphs/25/000000/delete-forever.png"/>
+                        </button>
+                    </div>
+                </div>
+                <div class="notes-content">
+                    <div class="notes-content--sidebar">
+                        <div class="notes-content-names"></div>
+                    </div>
+                    <div class="content-main">
+                        <textarea cols="30" rows="12" 
+                        class="content-typing" 
+                        autofocus 
+                        placeholder="Enter the content"></textarea>
+                    </div>
+                </div> 
+            </div>
+
         </div>
 
         <!-- launchpad -->
-        <div class="launchpad" id="launchpad">
+        <div class="launchpad" id="launchpad" ondblclick="handleOpenLaunching()">
             <div class="searchbox">
               <div class="search-input">
                 <svg width="24" height="24">
@@ -269,27 +308,33 @@
               </div>
             </div>
             <div class="apps-container">
-                <div class="launchpad-children" data-keywords="App Store,App, Store">
-                    <img src="./icons/appstore.png" alt="App Store" />
+                <div class="launchpad-children" 
+                    data-keywords="App Store">
+                    <img src="./icons/appstore.png" alt="App Store, app store" />
                     <strong>App Store</strong>
                 </div>
-                <div class="launchpad-children open-notes-launch">
+                <div class="launchpad-children open-notes-launch"
+                    data-keywords="Notes, notes">
                     <img src="./icons/notes.png" alt="Notes" />
                     <strong>Notes</strong>
                 </div>
-                <div class="launchpad-children open-cal-launch">
+                <div class="launchpad-children open-cal-launch"
+                    data-keywords="Calculator, calculator">
                     <img src="./icons/calculator.png" alt="Calculator" />
                     <strong>Calculator</strong>
                 </div>
-                <div class="launchpad-children open-terminal-launch">
+                <div class="launchpad-children open-terminal-launch"
+                    data-keywords="Terminal, terminal">
                     <img src="./icons/terminal.png" alt="Terminal"/>
                     <strong>Terminal</strong>
                 </div>
-                <div class="launchpad-children open-google-launch">
+                <div class="launchpad-children open-google-launch"
+                    data-keywords="Google, google">
                     <img src="./icons/chrome.png" alt="Chrome"/>
                     <strong>Google</strong>
                 </div>
-                <div class="launchpad-children open-google-launch">
+                <div class="launchpad-children open-google-launch"
+                    data-keywords="VScode, vscode">
                     <img src="./icons/vscode.svg" alt="Vscode">
                     <strong>VScode</strong>
                 </div>
@@ -300,6 +345,7 @@
         <script src="JavaScript/script.js"></script>
         <script src="JavaScript/calculator.js"></script>
         <script src="JavaScript/launchpad.js"></script>
+        <script src="JavaScript/notes.js"></script>
 
     </body>
 </html>

@@ -1,15 +1,14 @@
+var openCal = document.querySelector(".open-cal")
+var closeCal = document.querySelector(".close-cal")
+
 var app_name_calculator = document.querySelector("#calculator")
 var calculator = document.querySelector(".calculator")
 var point_cal = document.querySelector("#point-cal")
-var closecal = document.querySelector(".close-cal")
-var opencalculator = document.querySelector(".open-cal")
-var point_cal = document.querySelector("#point-cal")
 
-opencalculator.addEventListener("click", () =>
+openCal.addEventListener("click", () =>
   open_window(calculator, point_cal, app_name_calculator)
 )
-
-closecal.addEventListener("click", () =>
+closeCal.addEventListener("click", () =>
   close_window(calculator, point_cal, app_name_calculator)
 )
 
@@ -36,7 +35,7 @@ function calculate(value) {
   
     const isEmpty = display.value === "0"
     const isDecimalLastOperand = lastNumber(display.value).includes(".")
-    const isNumber =
+    const isNumber =  
       value === "0" ||
       value === "1" ||
       value === "2" ||

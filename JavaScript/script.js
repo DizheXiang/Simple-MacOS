@@ -35,16 +35,18 @@ function updateTime() {
     var hours = now.getHours();
     if(hours > 11){
         hours -= 12;
+    } else if (hours === 0) {
+        hours = 12;
     }
     var minutes = "";
     minutes += now.getMinutes();
-    if(minutes < 10){
+    if(minutes < 10) {
         minutes = "0" +  minutes;
     }
     var days = new Array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
     var months = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
     str += days[now.getDay()] +  " " + months[now.getMonth()] + " " + now.getDate() 
-    + " "+ hours +":" + minutes;
+    + " "+ hours + ":" + minutes;
     if(now.getHours() > 11){
         str += " PM";
     } else {
