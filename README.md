@@ -1,12 +1,12 @@
 # Simple-MacOS
 
 ## Functions: ##
-- Interactive Navbar
-- Personal links at the right of Navbar
+- Navbar with hover effects (would appear the current app name)
+- Personal LinkedIn and GitHub links at the right side of Navbar
 - Automatically updated time
 - Dock with hover animation
-- **Calculator**
-- **Launchpad** 
+- **Calculator** (able to do basic calculations)
+- **Launchpad** (click on the dock icon or double click on empty space to quit)
 - **Notes** -> currently working
 
 ## General View 
